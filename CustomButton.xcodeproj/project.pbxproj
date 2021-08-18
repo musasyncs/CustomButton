@@ -11,8 +11,12 @@
 		BA0B077926CB6F3700677759 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0B077826CB6F3700677759 /* SceneDelegate.swift */; };
 		BA0B077B26CB6F3700677759 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0B077A26CB6F3700677759 /* ViewController.swift */; };
 		BA0B077E26CB6F3700677759 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0B077C26CB6F3700677759 /* Main.storyboard */; };
-		BA0B078026CB6F3B00677759 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA0B077F26CB6F3B00677759 /* Assets.xcassets */; };
 		BA0B078326CB6F3B00677759 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0B078126CB6F3B00677759 /* LaunchScreen.storyboard */; };
+		BA0B078B26CB717300677759 /* PlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0B078A26CB717300677759 /* PlusButton.swift */; };
+		BA0B079026CB72AA00677759 /* ButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0B078F26CB72AA00677759 /* ButtonViewModel.swift */; };
+		BA0B079226CBF97300677759 /* AvatarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0B079126CBF97300677759 /* AvatarButton.swift */; };
+		BA17416626CC0411007A6D60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA17416526CC0411007A6D60 /* Assets.xcassets */; };
+		BA17416826CC1DBB007A6D60 /* BellButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA17416726CC1DBB007A6D60 /* BellButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,9 +25,13 @@
 		BA0B077826CB6F3700677759 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BA0B077A26CB6F3700677759 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BA0B077D26CB6F3700677759 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BA0B077F26CB6F3B00677759 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA0B078226CB6F3B00677759 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA0B078426CB6F3B00677759 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA0B078A26CB717300677759 /* PlusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusButton.swift; sourceTree = "<group>"; };
+		BA0B078F26CB72AA00677759 /* ButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewModel.swift; sourceTree = "<group>"; };
+		BA0B079126CBF97300677759 /* AvatarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarButton.swift; sourceTree = "<group>"; };
+		BA17416526CC0411007A6D60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BA17416726CC1DBB007A6D60 /* BellButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BellButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +66,41 @@
 			children = (
 				BA0B077626CB6F3700677759 /* AppDelegate.swift */,
 				BA0B077826CB6F3700677759 /* SceneDelegate.swift */,
-				BA0B077A26CB6F3700677759 /* ViewController.swift */,
+				BA0B078D26CB719500677759 /* Controller */,
+				BA0B078C26CB718600677759 /* View */,
+				BA0B078E26CB71A800677759 /* ViewModel */,
 				BA0B077C26CB6F3700677759 /* Main.storyboard */,
-				BA0B077F26CB6F3B00677759 /* Assets.xcassets */,
 				BA0B078126CB6F3B00677759 /* LaunchScreen.storyboard */,
 				BA0B078426CB6F3B00677759 /* Info.plist */,
+				BA17416526CC0411007A6D60 /* Assets.xcassets */,
 			);
 			path = CustomButton;
+			sourceTree = "<group>";
+		};
+		BA0B078C26CB718600677759 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BA0B078A26CB717300677759 /* PlusButton.swift */,
+				BA0B079126CBF97300677759 /* AvatarButton.swift */,
+				BA17416726CC1DBB007A6D60 /* BellButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BA0B078D26CB719500677759 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BA0B077A26CB6F3700677759 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BA0B078E26CB71A800677759 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BA0B078F26CB72AA00677759 /* ButtonViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA0B078326CB6F3B00677759 /* LaunchScreen.storyboard in Resources */,
-				BA0B078026CB6F3B00677759 /* Assets.xcassets in Resources */,
+				BA17416626CC0411007A6D60 /* Assets.xcassets in Resources */,
 				BA0B077E26CB6F3700677759 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +173,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA17416826CC1DBB007A6D60 /* BellButton.swift in Sources */,
+				BA0B079226CBF97300677759 /* AvatarButton.swift in Sources */,
+				BA0B078B26CB717300677759 /* PlusButton.swift in Sources */,
+				BA0B079026CB72AA00677759 /* ButtonViewModel.swift in Sources */,
 				BA0B077B26CB6F3700677759 /* ViewController.swift in Sources */,
 				BA0B077726CB6F3700677759 /* AppDelegate.swift in Sources */,
 				BA0B077926CB6F3700677759 /* SceneDelegate.swift in Sources */,
