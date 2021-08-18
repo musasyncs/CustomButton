@@ -36,8 +36,10 @@ class BellButton: UIButton {
         iconImageView.image = UIImage(systemName: viewModel.iconName)
         
         addSubview(iconImageView)
-        
         setupConstraints()
+        
+        backgroundColor = UIColor(red: 227/255, green: 230/255, blue: 234/255, alpha: 1)
+        layer.cornerRadius = 16
     }
     
     private func setupConstraints() {

@@ -12,27 +12,18 @@ class ViewController: UIViewController {
     private let myButton1: PlusButton = {
         let viewModel = ButtonViewModel(iconName: "plus.circle.fill", title: "建立")
         let v = PlusButton(with: viewModel)
-        v.translatesAutoresizingMaskIntoConstraints = false
-        v.backgroundColor = UIColor(red: 231/255, green: 243/255, blue: 255/255, alpha: 1)
-        v.layer.cornerRadius = 16
         return v
     }()
     
     private let myButton2: AvatarButton = {
         let viewModel = ButtonViewModel(iconName: "pic", title: "你的活動")
         let v = AvatarButton(with: viewModel)
-        v.translatesAutoresizingMaskIntoConstraints = false
-        v.backgroundColor = UIColor(red: 227/255, green: 230/255, blue: 234/255, alpha: 1)
-        v.layer.cornerRadius = 16
         return v
     }()
     
     private let myButton3: BellButton = {
         let viewModel = ButtonViewModel(iconName: "bell.fill", title: "")
         let v = BellButton(with: viewModel)
-        v.translatesAutoresizingMaskIntoConstraints = false
-        v.backgroundColor = UIColor(red: 227/255, green: 230/255, blue: 234/255, alpha: 1)
-        v.layer.cornerRadius = 16
         return v
     }()
     

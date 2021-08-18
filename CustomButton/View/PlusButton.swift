@@ -12,7 +12,6 @@ class PlusButton: UIButton {
     // MARK: - 按鈕內部UI元件
     private let iconImageView: UIImageView = {
         let v = UIImageView()
-        v.translatesAutoresizingMaskIntoConstraints = false
         v.contentMode = .scaleAspectFit
         v.tintColor = UIColor(red: 8/255, green: 108/255, blue: 229/255, alpha: 1)
         return v
@@ -20,7 +19,6 @@ class PlusButton: UIButton {
     
     private let buttonLabel: UILabel = {
         let v = UILabel()
-        v.translatesAutoresizingMaskIntoConstraints = false
         v.textAlignment = .center
         v.textColor = UIColor(red: 8/255, green: 108/255, blue: 229/255, alpha: 1)
         v.font = UIFont.systemFont(ofSize: 12, weight: .regular)
@@ -54,8 +52,10 @@ class PlusButton: UIButton {
         buttonLabel.text = viewModel.title
         
         addSubview(subStack)
-        
         setupConstraints()
+        
+        backgroundColor = UIColor(red: 231/255, green: 243/255, blue: 255/255, alpha: 1)
+        layer.cornerRadius = 16
     }
     
     private func setupConstraints() {

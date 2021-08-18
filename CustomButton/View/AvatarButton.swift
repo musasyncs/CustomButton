@@ -12,14 +12,12 @@ class AvatarButton: UIButton {
     // MARK: - 按鈕內部UI元件
     private let iconImageView: UIImageView = {
         let v = UIImageView()
-        v.translatesAutoresizingMaskIntoConstraints = false
         v.contentMode = .scaleAspectFit
         return v
     }()
     
     private let buttonLabel: UILabel = {
         let v = UILabel()
-        v.translatesAutoresizingMaskIntoConstraints = false
         v.textAlignment = .center
         v.textColor = .black
         v.font = UIFont.systemFont(ofSize: 12, weight: .regular)
@@ -51,11 +49,12 @@ class AvatarButton: UIButton {
     private func setupView(with viewModel: ButtonViewModel) {
         iconImageView.image = UIImage(named: viewModel.iconName)
         buttonLabel.text = viewModel.title
-        
+
         addSubview(subStack)
-        
         setupConstraints()
         
+        backgroundColor = UIColor(red: 227/255, green: 230/255, blue: 234/255, alpha: 1)
+        layer.cornerRadius = 16
     }
     
     private func setupConstraints() {
