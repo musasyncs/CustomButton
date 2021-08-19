@@ -58,7 +58,6 @@ class AvatarButton: UIButton {
     }
     
     private func setupConstraints() {
-        // subStack
         NSLayoutConstraint.activate([
             subStack.leadingAnchor.constraint(equalTo: leadingAnchor,constant: 0),
             subStack.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -10),

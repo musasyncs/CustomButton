@@ -59,7 +59,6 @@ class PlusButton: UIButton {
     }
     
     private func setupConstraints() {
-        // subStack
         NSLayoutConstraint.activate([
             subStack.leadingAnchor.constraint(equalTo: leadingAnchor,constant: 8),
             subStack.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -9),

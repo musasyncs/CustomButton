@@ -43,7 +43,6 @@ class BellButton: UIButton {
     }
     
     private func setupConstraints() {
-        // subStack
         NSLayoutConstraint.activate([
             iconImageView.leadingAnchor.constraint(equalTo: leadingAnchor,constant: 8),
             iconImageView.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -8),
