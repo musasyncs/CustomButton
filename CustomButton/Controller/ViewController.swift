@@ -9,66 +9,43 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    private let myButton1: PlusButton = {
-        let viewModel = ButtonViewModel(iconName: "plus.circle.fill", title: "建立")
-        let v = PlusButton(with: viewModel)
-        return v
-    }()
+    let myButton1 = PlusButton(with: ButtonViewModel(iconName: "plus.circle.fill", title: "建立"))
     
-    private let myButton2: AvatarButton = {
-        let viewModel = ButtonViewModel(iconName: "pic", title: "你的活動")
-        let v = AvatarButton(with: viewModel)
-        return v
-    }()
-    
-    private let myButton3: BellButton = {
-        let viewModel = ButtonViewModel(iconName: "bell.fill", title: "")
-        let v = BellButton(with: viewModel)
-        return v
-    }()
+    let myButton2 = AvatarButton(with: ButtonViewModel(iconName: "pic", title: "你的活動"))
+
+    let myButton3 = BellButton(with: ButtonViewModel(iconName: "bell.fill", title: ""))
     
     private lazy var buttonStack: UIStackView = {
         let v = UIStackView(arrangedSubviews: [myButton1, myButton2, myButton3])
         v.translatesAutoresizingMaskIntoConstraints = false
-        v.axis = .horizontal
-        v.distribution = .equalSpacing
-        v.spacing = 10
+        v.axis                                      = .horizontal
+        v.distribution                              = .equalSpacing
+        v.spacing                                   = 0
         return v
     }()
     
     
-    // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemBackground
         
         view.addSubview(buttonStack)
         setupConstraints()
     }
+
     
-    
-    // MARK: - setupConstraints
     private func setupConstraints() {
-        // buttonStack
         NSLayoutConstraint.activate([
-            buttonStack.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
-            buttonStack.topAnchor.constraint(equalTo: view.topAnchor, constant: 150),
-            NSLayoutConstraint(item: buttonStack, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0, constant: 205),
-            NSLayoutConstraint(item: buttonStack, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0, constant: 32),
-        ])
+            buttonStack.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 15),
+            buttonStack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 80),
+            buttonStack.widthAnchor.constraint(equalToConstant: 205),
+            buttonStack.heightAnchor.constraint(equalToConstant: 32),
         
-        // myButton1
-        NSLayoutConstraint.activate([
-            NSLayoutConstraint(item: myButton1, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0, constant: 63),
-        ])
-        
-        // myButton2
-        NSLayoutConstraint.activate([
-            NSLayoutConstraint(item: myButton2, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0, constant: 90),
-        ])
-        
-        // myButton3
-        NSLayoutConstraint.activate([
-            NSLayoutConstraint(item: myButton3, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0, constant: 32),
+            myButton1.widthAnchor.constraint(equalToConstant: 63),
+            
+            myButton2.widthAnchor.constraint(equalToConstant: 90),
+            
+            myButton3.widthAnchor.constraint(equalToConstant: 32),
         ])
     }
 }

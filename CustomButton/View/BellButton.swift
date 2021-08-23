@@ -9,17 +9,15 @@ import UIKit
 
 class BellButton: UIButton {
     
-    // MARK: - 按鈕內部UI元件
     private let iconImageView: UIImageView = {
         let v = UIImageView()
         v.translatesAutoresizingMaskIntoConstraints = false
-        v.contentMode = .scaleAspectFit
-        v.tintColor = .black
+        v.contentMode                               = .scaleAspectFit
+        v.tintColor                                 = .black
         return v
     }()
 
     
-    // MARK: - initializer
     init(with viewModel: ButtonViewModel) {
         super.init(frame: .zero)
         
@@ -31,14 +29,13 @@ class BellButton: UIButton {
     }
     
     
-    // MARK: - private functions
     private func setupView(with viewModel: ButtonViewModel) {
         iconImageView.image = UIImage(systemName: viewModel.iconName)
         
         addSubview(iconImageView)
         setupConstraints()
         
-        backgroundColor = UIColor(red: 227/255, green: 230/255, blue: 234/255, alpha: 1)
+        backgroundColor    = Colors.lightGray
         layer.cornerRadius = 16
     }
     

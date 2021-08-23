@@ -17,6 +17,7 @@
 		BA0B079226CBF97300677759 /* AvatarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0B079126CBF97300677759 /* AvatarButton.swift */; };
 		BA17416626CC0411007A6D60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA17416526CC0411007A6D60 /* Assets.xcassets */; };
 		BA17416826CC1DBB007A6D60 /* BellButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA17416726CC1DBB007A6D60 /* BellButton.swift */; };
+		BAC5E2D926D360DB000BDDE0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC5E2D826D360DB000BDDE0 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		BA0B079126CBF97300677759 /* AvatarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarButton.swift; sourceTree = "<group>"; };
 		BA17416526CC0411007A6D60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA17416726CC1DBB007A6D60 /* BellButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BellButton.swift; sourceTree = "<group>"; };
+		BAC5E2D826D360DB000BDDE0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,10 +71,11 @@
 				BA0B078D26CB719500677759 /* Controller */,
 				BA0B078C26CB718600677759 /* View */,
 				BA0B078E26CB71A800677759 /* ViewModel */,
+				BAC5E2DA26D360E3000BDDE0 /* Utilities */,
 				BA0B077C26CB6F3700677759 /* Main.storyboard */,
 				BA0B078126CB6F3B00677759 /* LaunchScreen.storyboard */,
-				BA0B078426CB6F3B00677759 /* Info.plist */,
 				BA17416526CC0411007A6D60 /* Assets.xcassets */,
+				BA0B078426CB6F3B00677759 /* Info.plist */,
 			);
 			path = CustomButton;
 			sourceTree = "<group>";
@@ -101,6 +104,14 @@
 				BA0B078F26CB72AA00677759 /* ButtonViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BAC5E2DA26D360E3000BDDE0 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BAC5E2D826D360DB000BDDE0 /* Constants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +190,7 @@
 				BA0B079026CB72AA00677759 /* ButtonViewModel.swift in Sources */,
 				BA0B077B26CB6F3700677759 /* ViewController.swift in Sources */,
 				BA0B077726CB6F3700677759 /* AppDelegate.swift in Sources */,
+				BAC5E2D926D360DB000BDDE0 /* Constants.swift in Sources */,
 				BA0B077926CB6F3700677759 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
