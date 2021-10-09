@@ -8,7 +8,6 @@
 import UIKit
 
 class BellButton: UIButton {
-    
     private let iconImageView: UIImageView = {
         let v = UIImageView()
         v.translatesAutoresizingMaskIntoConstraints = false
@@ -20,16 +19,6 @@ class BellButton: UIButton {
     
     init(with viewModel: ButtonViewModel) {
         super.init(frame: .zero)
-        
-        setupView(with: viewModel)
-    }
-        
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    
-    private func setupView(with viewModel: ButtonViewModel) {
         iconImageView.image = UIImage(systemName: viewModel.iconName)
         
         addSubview(iconImageView)
@@ -37,6 +26,10 @@ class BellButton: UIButton {
         
         backgroundColor    = Colors.lightGray
         layer.cornerRadius = 16
+    }
+        
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     private func setupConstraints() {

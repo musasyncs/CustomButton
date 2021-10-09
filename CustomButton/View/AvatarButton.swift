@@ -8,7 +8,6 @@
 import UIKit
 
 class AvatarButton: UIButton {
-
     private let iconImageView: UIImageView = {
         let v = UIImageView()
         v.contentMode = .scaleAspectFit
@@ -32,19 +31,8 @@ class AvatarButton: UIButton {
         return v
     }()
     
-    
     init(with viewModel: ButtonViewModel) {
         super.init(frame: .zero)
-        
-        setupView(with: viewModel)
-    }
-        
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    
-    private func setupView(with viewModel: ButtonViewModel) {
         iconImageView.image = UIImage(named: viewModel.iconName)
         buttonLabel.text    = viewModel.title
 
@@ -54,6 +42,10 @@ class AvatarButton: UIButton {
         backgroundColor    = Colors.lightGray
         layer.cornerRadius = 16
     }
+        
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
@@ -61,7 +53,6 @@ class AvatarButton: UIButton {
             subStack.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -6),
             subStack.topAnchor.constraint(equalTo: topAnchor, constant: 6),
             subStack.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -6),
-            
             iconImageView.widthAnchor.constraint(equalTo: iconImageView.heightAnchor, multiplier: 1),
         ])
     }
